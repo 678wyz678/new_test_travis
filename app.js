@@ -9,6 +9,7 @@ app.get('/superagent', function (req, res, next) {
     superagent.get('https://cnodejs.org/')
       .end(function (err, sres) {
         // 常规的错误处理
+        console.log(sres.text)
         if (err) {
           return next(err);
         }
@@ -17,14 +18,13 @@ app.get('/superagent', function (req, res, next) {
         // 剩下就都是 jquery 的内容了
         var $ = cheerio.load(sres.text);
         var items = [];
-        $('#topic_list ').each(function (idx, element) {
+        $('#topic_list .topic_title').each(function (idx, element) {
           var $element = $(element);
           items.push({
             title: $element.attr('title'),
             href: $element.attr('href')
           });
         });
-
         res.send(items);
       });
   });

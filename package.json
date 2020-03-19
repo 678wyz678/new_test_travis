@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "description": "This is my learning package",
   "license": "SEE LICENSE IN license.txt",
-  "repository": {},
+  "repository": {
+    "github": "git@github.com:678wyz678/new_test_travis.git"
+  },
   "scripts": {
     "start": "nodemon app.js"
   },

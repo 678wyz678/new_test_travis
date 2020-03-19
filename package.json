@@ -5,12 +5,10 @@
   "license": "SEE LICENSE IN license.txt",
   "repository": {},
   "scripts": {
-    "start": "node app.js"
+    "start": "nodemon app.js"
   },
   "dependencies": {
-    "async": "^3.2.0",
     "cheerio": "^1.0.0-rc.3",
-    "eventproxy": "^1.0.0",
     "express": "^4.17.1",
     "superagent": "^5.2.2"
   }
